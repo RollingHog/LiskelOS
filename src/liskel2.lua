@@ -295,7 +295,7 @@ function console.history.Recall()
   return console.history.cmdmem[console.history.recallptr]
 end
 function console.history.Add(str)
-  str = " " .. tostring(console.history.lnum) .. "  | " .. str
+  str = " " .. str
   table.insert(console.history.mem, str)
   console.history.viewbottom = #console.history.mem
   console.history.recallptr = #console.history.cmdmem + 1
